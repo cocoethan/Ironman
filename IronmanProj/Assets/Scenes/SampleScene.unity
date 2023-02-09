@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1918095022}
   - component: {fileID: 1918095021}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3030,8 +3030,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918095020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0884509, y: 0.05, z: -6.8423653}
-  m_LocalScale: {x: 80, y: 0.01, z: 80}
+  m_LocalPosition: {x: 3.8, y: 0.05, z: -14.2}
+  m_LocalScale: {x: 45, y: 0.01, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
