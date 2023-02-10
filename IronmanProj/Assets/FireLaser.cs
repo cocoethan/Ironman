@@ -3,6 +3,9 @@ using Valve.VR;
 
 public class FireLaser : MonoBehaviour
 {
+
+// add laser orientation & velocity, despawn on collision
+
     public GameObject laserPrefab;
     private SteamVR_Input_Sources leftGrip;
     private SteamVR_Input_Sources rightGrip;
