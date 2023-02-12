@@ -22,18 +22,18 @@ public class LaserPhysics : MonoBehaviour
     {
 	if (gripAction.GetStateDown(leftGrip)) {		// may not work
             hand = GameObject.Find("LeftHand");
-        }
-        if (gripAction.GetStateDown(rightGrip)) {
+    }
+    if (gripAction.GetStateDown(rightGrip)) {
             hand = GameObject.Find("RightHand");
-        }
-	else{ hand = GameObject.Find("Player");}
+    }
+	//else{ hand = GameObject.Find("Player");}
         this.gameObject.transform.LookAt(hand.transform);
-	this.gameObject.transform.Translate(-(Vector3.forward * 5.0f * Time.smoothDeltaTime)); //25
+	    this.gameObject.transform.Translate((Vector3.forward * 5.0f * Time.smoothDeltaTime)); //25
     }
 
     void Update()
     {
-	this.gameObject.transform.Translate(-(Vector3.forward * 5.0f * Time.smoothDeltaTime));
+	    this.gameObject.transform.Translate((Vector3.forward * 5.0f * Time.smoothDeltaTime));
     }
 
     void OnCollisionEnter() {

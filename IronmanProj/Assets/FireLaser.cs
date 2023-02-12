@@ -18,7 +18,7 @@ public class FireLaser : MonoBehaviour
     }
 
     void Start() { 
-	audioSource = gameObject.AddComponent<AudioSource>();
+	    audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = fireSound;
     }
 
