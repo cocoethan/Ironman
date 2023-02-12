@@ -32,7 +32,7 @@ public class Unibeam : MonoBehaviour
         if (gripAction.GetStateDown(leftGrip) && gripAction.GetStateDown(rightGrip))
         {		// * May need to say && !right if the lasers fire with the unibeam
             Vector3 spawnPosition = transform.position + transform.forward;			// likely will be wonky
-            spawnPosition.y -= 0.2f;
+            //spawnPosition.z -= 1.0f;
             Quaternion spawnRotation = Quaternion.identity;
             audioSource.Play();									// may need to be 0 ^
             GameObject cylinder = Instantiate(laserPrefab, spawnPosition, spawnRotation);

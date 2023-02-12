@@ -12,12 +12,12 @@ public class LaserPhysics : MonoBehaviour
     {
         player = GameObject.Find("VRCamera");
         this.gameObject.transform.LookAt(player.transform);
-	    this.gameObject.transform.Translate(-(Vector3.forward * 5.0f * Time.smoothDeltaTime)); //25
+	    this.gameObject.transform.Translate(-(Vector3.forward * 20.0f * Time.smoothDeltaTime)); //25
     }
 
     void Update()
     {
-	    this.gameObject.transform.Translate(-(Vector3.forward * 5.0f * Time.smoothDeltaTime));
+	    this.gameObject.transform.Translate(-(Vector3.forward * 20.0f * Time.smoothDeltaTime));
     }
 
     void OnCollisionEnter() {
