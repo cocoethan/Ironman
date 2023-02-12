@@ -24,10 +24,10 @@ public class LeftFire : MonoBehaviour
     private void Update()
     {
         if (gripAction.GetStateDown(leftGrip))
-        {		// * May need to say && !right if the lasers fire with the unibeam
-            Vector3 spawnPosition = transform.position + transform.forward;			// likely will be wonky
+        {
+            Vector3 spawnPosition = transform.position + transform.forward * 0.1f;			// likely will be wonky
             Quaternion spawnRotation = Quaternion.identity;
-            audioSource.Play();									// may need to be 0 ^
+            audioSource.Play();									
             GameObject cylinder = Instantiate(laserPrefab, spawnPosition, spawnRotation);
             //* DEDUCT AN AMOUNT FROM ENERGY BAR, ENSURE ENOUGH ENERGY REMAINS *//
         }
