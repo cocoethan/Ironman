@@ -25,7 +25,7 @@ public class RightFire : MonoBehaviour
     {
         if (gripAction.GetStateDown(rightGrip))
         {
-            Vector3 spawnPosition = transform.position + transform.forward;
+            Vector3 spawnPosition = transform.position + transform.forward * 0.1f;
             Quaternion spawnRotation = Quaternion.identity;
             audioSource.Play();
             GameObject cylinder = Instantiate(laserPrefab, spawnPosition, spawnRotation);
