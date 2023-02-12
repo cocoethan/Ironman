@@ -4,6 +4,7 @@ using Valve.VR;
 public class RightFire : MonoBehaviour
 {
     public GameObject laserPrefab;
+    private SteamVR_Input_Sources leftGrip;
     private SteamVR_Input_Sources rightGrip;
     private SteamVR_Action_Boolean gripAction;
     public AudioClip fireSound;
@@ -11,6 +12,7 @@ public class RightFire : MonoBehaviour
 
     private void Awake()
     {
+        leftGrip = SteamVR_Input_Sources.LeftHand;
         rightGrip = SteamVR_Input_Sources.RightHand;
         gripAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabGrip");
     }
@@ -23,7 +25,7 @@ public class RightFire : MonoBehaviour
 
     private void Update()
     {
-        if (gripAction.GetStateDown(rightGrip))
+        if (gripAction.GetStateDown(rightGrip) && !gripAction.GetStateDown(leftGrip))
         {
             Vector3 spawnPosition = (transform.position + transform.forward * 0.1f);
             spawnPosition.x += 0.17f;
