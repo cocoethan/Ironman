@@ -22,8 +22,9 @@ public class HealthScript : MonoBehaviour
         healthBar.fillAmount = health / MAX_HEALTH;
     }
 
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision collision)
     {
+        //if()
         health += 5;
     }
 }
