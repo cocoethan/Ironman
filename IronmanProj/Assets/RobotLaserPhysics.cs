@@ -21,8 +21,8 @@ public class RobotLaserPhysics : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-	
-	    Destroy(this.gameObject, 0.65f);
-	
+	if (collision.gameObject.name == "BodyCollider") {
+	Destroy(this.gameObject, 0.0f);
+	}
     }
 }
