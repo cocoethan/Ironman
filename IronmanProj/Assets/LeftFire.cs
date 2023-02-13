@@ -1,5 +1,6 @@
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.UI;
 
 public class LeftFire : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class LeftFire : MonoBehaviour
     private SteamVR_Action_Boolean gripAction;
     public AudioClip fireSound;
     private AudioSource audioSource;
+    private Image energyBar;
+    float deductAmount;
 
     private void Awake()
     {
@@ -21,6 +24,7 @@ public class LeftFire : MonoBehaviour
     {
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = fireSound;
+        energyBar = GetComponent<Image>();
     }
 
     private void Update()
@@ -33,6 +37,8 @@ public class LeftFire : MonoBehaviour
             Quaternion spawnRotation = Quaternion.identity;
             audioSource.Play();									
             GameObject cylinder = Instantiate(laserPrefab, spawnPosition, spawnRotation);
+            deductAmount = energyBar.fillAmount - 0.5f;
+            energyBar.fillAmount = deductAmount;
             //* DEDUCT AN AMOUNT FROM ENERGY BAR, ENSURE ENOUGH ENERGY REMAINS *//
         }
 
