@@ -43,5 +43,6 @@ public class EnergyScript : MonoBehaviour
 
         deductAmount = energyBar.fillAmount + 0.001f;
         energyBar.fillAmount = deductAmount;
+
     }
 }
