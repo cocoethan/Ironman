@@ -24,7 +24,6 @@ public class HealthScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //if()
         health += 5;
     }
 }
