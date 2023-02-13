@@ -23,7 +23,7 @@ public class HealthScript : MonoBehaviour
 
         if(healthgun.activeInHierarchy)
         {
-            health += 0.05f;
+            health += 0.1f;
         }
 
     }
