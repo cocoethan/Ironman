@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7785144913375860356}
   - component: {fileID: 7785144913375860359}
+  - component: {fileID: 8831393758965953676}
+  - component: {fileID: 1498510693293889142}
   m_Layer: 0
   m_Name: LaserContainer
   m_TagString: Untagged
@@ -45,6 +47,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f035466c340c1b841b5667c3d70dcd7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8831393758965953676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785144913375860358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.032199383, y: 0.029524803, z: 0.13171768}
+  m_Center: {x: 0.0017912388, y: -0.0012552738, z: 0.052023888}
+--- !u!54 &1498510693293889142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785144913375860358}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1001 &7785144914861384953
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,17 +11,17 @@ public class RobotLaserPhysics : MonoBehaviour
     {
 	player = GameObject.Find("Player");
         this.gameObject.transform.LookAt(player.transform);
-	this.gameObject.transform.Translate(Vector3.forward * 5.0f * Time.smoothDeltaTime); //25
+	this.gameObject.transform.Translate(Vector3.forward * 20.0f * Time.smoothDeltaTime); //25
     }
 
     void Update()
     {
 	this.gameObject.transform.LookAt(player.transform);
-	this.gameObject.transform.Translate(Vector3.forward * 5.0f * Time.smoothDeltaTime);
+	this.gameObject.transform.Translate(Vector3.forward * 20.0f * Time.smoothDeltaTime);
     }
 
     void OnCollisionEnter(Collision collision) {
-	if (collision.gameObject.name == "Cube") {
+	if (collision.gameObject.name == "Player") {
 	Destroy(this.gameObject, 0.0f);
 	}
     }
