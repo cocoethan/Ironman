@@ -18,7 +18,7 @@ public class HealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnCollisionEnter();
+        //OnCollisionEnter();
         healthBar.fillAmount = health / MAX_HEALTH;
     }
 
