@@ -22,6 +22,6 @@ public class UnibeamPhysics : MonoBehaviour
 
     void OnCollisionEnter()
     {
-        Destroy(this.gameObject, 0.0f);
+        //Destroy(this.gameObject, 0.0f);
     }
 }
