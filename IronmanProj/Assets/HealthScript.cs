@@ -9,6 +9,7 @@ public class HealthScript : MonoBehaviour
     private const float MAX_HEALTH = 100f;
     public float health = MAX_HEALTH;
     private Image healthBar;
+    public GameObject healthgun;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +19,12 @@ public class HealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //OnCollisionEnter();
         healthBar.fillAmount = health / MAX_HEALTH;
-    }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        health += 5;
+        if(healthgun.activeInHierarchy)
+        {
+            health += 0.05f;
+        }
+
     }
 }
